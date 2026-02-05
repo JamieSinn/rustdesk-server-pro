@@ -1,0 +1,70 @@
+name: Feature request
+description: Suggest an improvement or a new capability
+title: "[Feature]: "
+labels:
+  - enhancement
+  - triage
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: A clear and concise description of the feature
+      placeholder: What do you want to add or change?
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / motivation
+      description: What problem does this solve or what goal does it enable?
+      placeholder: Why is this needed?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe how you think this should work
+      placeholder: What should the system do?
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other approaches you considered and why they are not preferred
+      placeholder: Any workarounds or alternative designs?
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: What does "done" look like?
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact / priority
+      description: Who benefits and how important this is
+      placeholder: e.g. unblocks workflow, nice\-to\-have, high impact
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues and this is not a duplicate
+          required: true
+        - label: I provided enough detail to evaluate the request
+          required: true
+        - label: This is specifically referring to RustDesk Server Pro
+          required: true
+        - label: I removed or redacted secrets (tokens, passwords, private keys)
+          required: true
