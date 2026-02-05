@@ -1,0 +1,93 @@
+name: Bug report
+description: Report something that is broken or behaving unexpectedly
+title: "[Bug]: "
+labels:
+  - bug
+  - triage
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: A clear and concise description of the bug
+      placeholder: What happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What you expected to happen
+      placeholder: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What actually happened
+      placeholder: What did happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Minimal, reliable steps to reproduce the issue
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: frequency
+    attributes:
+      label: Frequency
+      description: How often does it happen?
+      placeholder: e.g. always, sometimes, once
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Release version
+      placeholder: e.g. v1.2.3
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, runtime, deployment context, relevant tooling versions
+      placeholder: e.g. macOS 14, Linux, Docker, Go 1\.xx
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / screenshots / attachments
+      description: Paste relevant output. Redact secrets.
+      placeholder: Include stack traces, console output, screenshots, etc.
+      render: shell
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact / severity
+      description: Who is affected and how urgent it is
+      placeholder: e.g. blocks deployment, minor annoyance, data loss risk
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues and this is not a duplicate
+          required: true
+        - label: I included enough details to reproduce the bug
+          required: true
+        - label: I removed or redacted secrets (tokens, passwords, private keys)
+          required: true
